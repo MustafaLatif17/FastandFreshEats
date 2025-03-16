@@ -1,159 +1,60 @@
-/* ======== General Styles ======== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
 body {
     background: #f8f9fa;
     color: #333;
 }
 
-/* ======== Header & Navigation ======== */
 header {
     background: #28a745;
     color: white;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+    padding: 15px;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
+    padding: 0;
 }
 
 nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* ======== Hero Section ======== */
 .hero {
     background: url('https://source.unsplash.com/1600x900/?healthy-food') center/cover no-repeat;
     height: 80vh;
+    text-align: center;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
-
-.hero-content {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 8px;
 }
 
 .hero h1 {
     font-size: 40px;
 }
 
-.hero p {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
 .btn {
-    display: inline-block;
     background: #ffcc00;
-    color: black;
     padding: 10px 20px;
-    border-radius: 5px;
     text-decoration: none;
+    color: black;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.btn:hover {
-    background: #ffdb4d;
-}
-
-/* ======== Meal Plans & Recipes ======== */
-.meal-plans, .recipes {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.meal-plan-container, .recipe-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.meal-plan, .recipe {
+.meal-plan {
     background: white;
+    padding: 20px;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 320px;
     text-align: center;
-    padding: 15px;
-    transition: 0.3s;
 }
 
-.meal-plan img, .recipe img {
+.meal-plan img {
     width: 100%;
     height: auto;
-    border-bottom: 2px solid #28a745;
-}
-
-.meal-plan h2, .recipe h3 {
-    margin: 15px 0 5px;
-    color: #333;
-}
-
-.meal-plan p, .recipe p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* ======== Meal Plan Details (Initially Hidden) ======== */
-.meal-plan-details {
-    display: none;
-    background: #f8f9fa;
-    padding: 15px;
     border-radius: 5px;
-    margin-top: 10px;
 }
 
-.meal-plan-details h4 {
-    color: #28a745;
-    margin-bottom: 5px;
-}
-
-/* ======== Footer ======== */
 footer {
     background: #28a745;
     color: white;
@@ -161,31 +62,4 @@ footer {
     padding: 15px;
     margin-top: 20px;
 }
-
-/* ======== Responsive Design ======== */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background: #28a745;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .meal-plan-container, .recipe-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 
