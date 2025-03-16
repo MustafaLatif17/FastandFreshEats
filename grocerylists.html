@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastandFreshEats | Grocery Lists</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FastandFreshEats</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mealplans.html">Meal Plans</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="grocerylists.html">Grocery Lists</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section class="grocery">
+        <h1>Grocery Lists</h1>
+        <p>Select meal plans or recipes to generate a shopping list.</p>
+
+        <div class="grocery-container">
+            <div class="pre-made-lists">
+                <h2>Pre-Made Grocery Lists</h2>
+                <ul>
+                    <li><a href="#" onclick="loadPreMadeList('weightLoss')">Weight Loss Plan</a></li>
+                    <li><a href="#" onclick="loadPreMadeList('vegan')">Vegan Meal Plan</a></li>
+                    <li><a href="#" onclick="loadPreMadeList('keto')">Keto Meal Plan</a></li>
+                </ul>
+            </div>
+
+            <div class="custom-list">
+                <h2>Custom Grocery List</h2>
+                <p>Select recipes:</p>
+                <div class="recipe-selection">
+                    <label><input type="checkbox" value="Avocado, Eggs, Whole-Grain Bread" onchange="updateGroceryList()"> Avocado Toast</label>
+                    <label><input type="checkbox" value="Banana, Mixed Berries, Greek Yogurt" onchange="updateGroceryList()"> Berry Smoothie</label>
+                    <label><input type="checkbox" value="Chicken, Greens, Avocado" onchange="updateGroceryList()"> Grilled Chicken Salad</label>
+                </div>
+
+                <h3>Your Grocery List:</h3>
+                <ul id="groceryList"></ul>
+                <button class="btn" onclick="downloadGroceryList()">Download List</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FastandFreshEats | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
