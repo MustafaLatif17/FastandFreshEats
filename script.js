@@ -1,58 +1,36 @@
+
 function toggleMenu() {
     document.querySelector(".nav-links").classList.toggle("active");
 }
 
-// Testimonial Slider
-let index = 0;
-function showTestimonial() {
-    let testimonials = document.querySelectorAll(".testimonial");
-    testimonials.forEach(t => t.style.display = "none");
-    testimonials[index].style.display = "block";
-    index = (index + 1) % testimonials.length;
-}
 
-setInterval(showTestimonial, 4000);
-showTestimonial();
-// Toggle Recipe Details
 function toggleRecipe(id) {
     let recipe = document.getElementById(id);
-    if (recipe.style.display === "block") {
-        recipe.style.display = "none";
-    } else {
-        recipe.style.display = "block";
-    }
+    recipe.style.display = (recipe.style.display === "block") ? "none" : "block";
 }
 
-// Search Functionality
+
 function searchRecipes() {
     let input = document.getElementById("searchBar").value.toLowerCase();
     let recipes = document.querySelectorAll(".recipe");
 
     recipes.forEach(recipe => {
         let title = recipe.querySelector("h3").innerText.toLowerCase();
-        if (title.includes(input)) {
-            recipe.style.display = "block";
-        } else {
-            recipe.style.display = "none";
-        }
+        recipe.style.display = title.includes(input) ? "block" : "none";
     });
 }
 
-// Filter Recipes by Category
 function filterRecipes() {
     let category = document.getElementById("categoryFilter").value;
     let recipes = document.querySelectorAll(".recipe");
 
     recipes.forEach(recipe => {
         let recipeCategory = recipe.getAttribute("data-category");
-        if (category === "all" || recipeCategory === category) {
-            recipe.style.display = "block";
-        } else {
-            recipe.style.display = "none";
-        }
+        recipe.style.display = (category === "all" || recipeCategory === category) ? "block" : "none";
     });
 }
-// Load Pre-Made Grocery Lists
+
+
 function loadPreMadeList(plan) {
     let groceryList = document.getElementById("groceryList");
     groceryList.innerHTML = "";
@@ -70,7 +48,7 @@ function loadPreMadeList(plan) {
     });
 }
 
-// Update Grocery List Based on Selected Recipes
+
 function updateGroceryList() {
     let checkboxes = document.querySelectorAll(".recipe-selection input:checked");
     let groceryList = document.getElementById("groceryList");
@@ -86,7 +64,7 @@ function updateGroceryList() {
     });
 }
 
-// Download Grocery List as Text File
+
 function downloadGroceryList() {
     let groceryList = document.getElementById("groceryList").innerText;
     let blob = new Blob([groceryList], { type: "text/plain" });
@@ -95,86 +73,36 @@ function downloadGroceryList() {
     a.download = "grocery_list.txt";
     a.click();
 }
-// Toggle Blog Post Content
+
+
 function toggleBlogPost(id) {
     let content = document.getElementById(id);
-    if (content.style.display === "block") {
-        content.style.display = "none";
-    } else {
-        content.style.display = "block";
-    }
+    content.style.display = (content.style.display === "block") ? "none" : "block";
 }
 
-// Search Blog Posts
+
 function searchBlogPosts() {
     let input = document.getElementById("searchBlog").value.toLowerCase();
     let posts = document.querySelectorAll(".blog-post");
 
     posts.forEach(post => {
         let title = post.querySelector("h3").innerText.toLowerCase();
-        if (title.includes(input)) {
-            post.style.display = "block";
-        } else {
-            post.style.display = "none";
-        }
+        post.style.display = title.includes(input) ? "block" : "none";
     });
 }
 
-// Filter Blog Posts by Category
+
 function filterBlogPosts() {
     let category = document.getElementById("blogCategoryFilter").value;
     let posts = document.querySelectorAll(".blog-post");
 
     posts.forEach(post => {
         let postCategory = post.getAttribute("data-category");
-        if (category === "all" || postCategory === category) {
-            post.style.display = "block";
-        } else {
-            post.style.display = "none";
-        }
-    });
-}
-// Toggle Blog Post Content
-function toggleBlogPost(id) {
-    let content = document.getElementById(id);
-    if (content.style.display === "block") {
-        content.style.display = "none";
-    } else {
-        content.style.display = "block";
-    }
-}
-
-// Search Blog Posts
-function searchBlogPosts() {
-    let input = document.getElementById("searchBlog").value.toLowerCase();
-    let posts = document.querySelectorAll(".blog-post");
-
-    posts.forEach(post => {
-        let title = post.querySelector("h3").innerText.toLowerCase();
-        if (title.includes(input)) {
-            post.style.display = "block";
-        } else {
-            post.style.display = "none";
-        }
+        post.style.display = (category === "all" || postCategory === category) ? "block" : "none";
     });
 }
 
-// Filter Blog Posts by Category
-function filterBlogPosts() {
-    let category = document.getElementById("blogCategoryFilter").value;
-    let posts = document.querySelectorAll(".blog-post");
 
-    posts.forEach(post => {
-        let postCategory = post.getAttribute("data-category");
-        if (category === "all" || postCategory === category) {
-            post.style.display = "block";
-        } else {
-            post.style.display = "none";
-        }
-    });
-}
-
-// Add Comment to Blog Post
 function addComment(inputId, listId) {
     let input = document.getElementById(inputId);
     let commentText = input.value.trim();
@@ -194,7 +122,7 @@ function addComment(inputId, listId) {
     localStorage.setItem(listId, JSON.stringify(comments));
 }
 
-// Load Comments from localStorage
+
 function loadComments() {
     let lists = document.querySelectorAll(".comment-section ul");
 
@@ -210,9 +138,14 @@ function loadComments() {
     });
 }
 
-// Load comments on page load
+
 window.onload = loadComments;
-// Validate and Submit Contact Form
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+});
+
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent actual form submission
 
@@ -233,14 +166,26 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         return;
     }
 
-    formStatus.style.color = "green";
-    formStatus.textContent = "Message sent successfully!";
-    
-    // Clear fields after submission
-    document.getElementById("contactForm").reset();
+
+    let params = {
+        user_name: name,
+        user_email: email,
+        message: message
+    };
+
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params)
+        .then(response => {
+            formStatus.style.color = "green";
+            formStatus.textContent = "Message sent successfully!";
+            document.getElementById("contactForm").reset();
+        })
+        .catch(error => {
+            formStatus.style.color = "red";
+            formStatus.textContent = "Error sending message. Please try again.";
+        });
 });
 
-// Email Validation Function
+
 function validateEmail(email) {
     let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
