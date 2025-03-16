@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastandFreshEats | Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FastandFreshEats</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mealplans.html">Meal Plans</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="grocerylists.html">Grocery Lists</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section class="recipes">
+        <h1>Our Healthy Recipes</h1>
+        <p>Find quick and easy recipes to fit your busy lifestyle.</p>
+
+        <div class="search-filter">
+            <input type="text" id="searchBar" placeholder="Search recipes..." onkeyup="searchRecipes()">
+            <select id="categoryFilter" onchange="filterRecipes()">
+                <option value="all">All Categories</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snacks</option>
+            </select>
+        </div>
+
+        <div class="recipe-container">
+            <div class="recipe" data-category="breakfast">
+                <img src="https://source.unsplash.com/400x250/?healthy-breakfast" alt="Avocado Toast">
+                <h3>Avocado Toast with Eggs</h3>
+                <p>Calories: 320 kcal</p>
+                <button class="btn" onclick="toggleRecipe('recipe1')">View Recipe</button>
+                <div class="recipe-details" id="recipe1">
+                    <h4>Ingredients:</h4>
+                    <ul>
+                        <li>1 slice whole-grain bread</li>
+                        <li>1/2 avocado</li>
+                        <li>1 boiled egg</li>
+                    </ul>
+                    <h4>Instructions:</h4>
+                    <p>Mash avocado, spread on toast, and top with sliced boiled egg.</p>
+                </div>
+            </div>
+
+            <div class="recipe" data-category="lunch">
+                <img src="https://source.unsplash.com/400x250/?healthy-salad" alt="Grilled Chicken Salad">
+                <h3>Grilled Chicken Salad</h3>
+                <p>Calories: 450 kcal</p>
+                <button class="btn" onclick="toggleRecipe('recipe2')">View Recipe</button>
+                <div class="recipe-details" id="recipe2">
+                    <h4>Ingredients:</h4>
+                    <ul>
+                        <li>1 grilled chicken breast</li>
+                        <li>2 cups mixed greens</li>
+                    </ul>
+                    <h4>Instructions:</h4>
+                    <p>Mix all ingredients, add dressing, and toss lightly.</p>
+                </div>
+            </div>
+
+            <div class="recipe" data-category="snack">
+                <img src="https://source.unsplash.com/400x250/?smoothie" alt="Berry Smoothie">
+                <h3>Berry Smoothie</h3>
+                <p>Calories: 250 kcal</p>
+                <button class="btn" onclick="toggleRecipe('recipe3')">View Recipe</button>
+                <div class="recipe-details" id="recipe3">
+                    <h4>Ingredients:</h4>
+                    <ul>
+                        <li>1 banana</li>
+                        <li>1/2 cup mixed berries</li>
+                    </ul>
+                    <h4>Instructions:</h4>
+                    <p>Blend ingredients until smooth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FastandFreshEats | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
