@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastandFreshEats | Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FastandFreshEats</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mealplans.html">Meal Plans</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="grocerylists.html">Grocery Lists</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section class="blog">
+        <h1>Healthy Eating Blog</h1>
+        <p>Read expert advice on meal planning, nutrition, and wellness.</p>
+
+        <div class="search-filter">
+            <input type="text" id="searchBlog" placeholder="Search blog posts..." onkeyup="searchBlogPosts()">
+            <select id="blogCategoryFilter" onchange="filterBlogPosts()">
+                <option value="all">All Categories</option>
+                <option value="mealprep">Meal Prep</option>
+                <option value="healthyeating">Healthy Eating</option>
+                <option value="weightloss">Weight Loss</option>
+            </select>
+        </div>
+
+        <div class="blog-container">
+            <div class="blog-post" data-category="mealprep">
+                <h3>5 Meal Prep Hacks to Save Time</h3>
+                <p><small>Posted on March 10, 2025</small></p>
+                <button class="btn" onclick="toggleBlogPost('post1')">Read More</button>
+                <div class="blog-content" id="post1">
+                    <p>Meal prepping can save you time and effort. Here are five easy hacks...</p>
+
+                    <div class="comment-section">
+                        <h4>Leave a Comment:</h4>
+                        <input type="text" id="commentInput1" placeholder="Write a comment...">
+                        <button class="btn" onclick="addComment('commentInput1', 'commentList1')">Post</button>
+                        <ul id="commentList1"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-post" data-category="healthyeating">
+                <h3>The Benefits of Eating Whole Foods</h3>
+                <p><small>Posted on March 5, 2025</small></p>
+                <button class="btn" onclick="toggleBlogPost('post2')">Read More</button>
+                <div class="blog-content" id="post2">
+                    <p>Whole foods are packed with nutrients and free from processed ingredients...</p>
+
+                    <div class="comment-section">
+                        <h4>Leave a Comment:</h4>
+                        <input type="text" id="commentInput2" placeholder="Write a comment...">
+                        <button class="btn" onclick="addComment('commentInput2', 'commentList2')">Post</button>
+                        <ul id="commentList2"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FastandFreshEats | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
