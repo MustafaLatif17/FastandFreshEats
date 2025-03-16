@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    
     <header>
         <div class="logo">FastandFreshEats</div>
         <nav>
@@ -24,97 +25,106 @@
         </nav>
     </header>
 
+    
     <section class="recipes">
-        <h1>Our Healthy Recipes</h1>
-        <p>Find quick and easy recipes to fit your busy lifestyle.</p>
+        <h1>Our Delicious Recipes</h1>
+        <p>Find step-by-step instructions to prepare healthy and delicious meals.</p>
 
+        
         <div class="search-filter">
-            <input type="text" id="searchBar" placeholder="Search recipes..." onkeyup="searchRecipes()">
-            <select id="categoryFilter" onchange="filterRecipes()">
-                <option value="all">All Categories</option>
-                <option value="breakfast">Breakfast</option>
-                <option value="lunch">Lunch</option>
-                <option value="dinner">Dinner</option>
-                <option value="snack">Snacks</option>
-            </select>
+            <input type="text" id="searchBar" placeholder="Search for a recipe..." onkeyup="searchRecipes()">
         </div>
 
         <div class="recipe-container">
-            <!-- Breakfast Recipe -->
-            <div class="recipe" data-category="breakfast">
-                <img src="https://source.unsplash.com/400x250/?healthy-breakfast" alt="Avocado Toast">
-                <h3>Avocado Toast with Eggs</h3>
-                <p>Calories: 320 kcal</p>
-                <button class="btn" onclick="toggleRecipe('recipe1')">View Recipe</button>
-                <div class="recipe-details" id="recipe1">
-                    <h4>Ingredients:</h4>
-                    <ul>
-                        <li>1 slice whole-grain bread</li>
-                        <li>1/2 avocado</li>
-                        <li>1 boiled egg</li>
-                    </ul>
-                    <h4>Instructions:</h4>
-                    <p>Mash avocado, spread on toast, and top with sliced boiled egg.</p>
-                </div>
+            <!-- Recipe 1: Chicken Salad -->
+            <div class="recipe" data-name="chicken salad">
+                <h2>Chicken Salad</h2>
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>Grilled chicken breast</li>
+                    <li>Mixed greens</li>
+                    <li>Cherry tomatoes</li>
+                    <li>Olive oil dressing</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Chop the grilled chicken into bite-sized pieces.</li>
+                    <li>Mix with greens, tomatoes, and dressing.</li>
+                    <li>Serve fresh and enjoy!</li>
+                </ol>
             </div>
 
-            <!-- Lunch Recipe -->
-            <div class="recipe" data-category="lunch">
-                <img src="https://source.unsplash.com/400x250/?healthy-salad" alt="Grilled Chicken Salad">
-                <h3>Grilled Chicken Salad</h3>
-                <p>Calories: 450 kcal</p>
-                <button class="btn" onclick="toggleRecipe('recipe2')">View Recipe</button>
-                <div class="recipe-details" id="recipe2">
-                    <h4>Ingredients:</h4>
-                    <ul>
-                        <li>1 grilled chicken breast</li>
-                        <li>2 cups mixed greens</li>
-                        <li>Cherry tomatoes, sliced</li>
-                        <li>1 tbsp olive oil</li>
-                    </ul>
-                    <h4>Instructions:</h4>
-                    <p>Mix all ingredients, add dressing, and toss lightly.</p>
-                </div>
+           
+            <div class="recipe" data-name="quinoa power bowl">
+                <h2>Quinoa Power Bowl</h2>
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>Cooked quinoa</li>
+                    <li>Avocado</li>
+                    <li>Grilled vegetables</li>
+                    <li>Black beans</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Cook quinoa according to package instructions.</li>
+                    <li>Dice avocado and grill vegetables.</li>
+                    <li>Mix everything together and serve.</li>
+                </ol>
             </div>
 
-            <!-- Snack Recipe -->
-            <div class="recipe" data-category="snack">
-                <img src="https://source.unsplash.com/400x250/?smoothie" alt="Berry Smoothie">
-                <h3>Berry Smoothie</h3>
-                <p>Calories: 250 kcal</p>
-                <button class="btn" onclick="toggleRecipe('recipe3')">View Recipe</button>
-                <div class="recipe-details" id="recipe3">
-                    <h4>Ingredients:</h4>
-                    <ul>
-                        <li>1 banana</li>
-                        <li>1/2 cup mixed berries</li>
-                        <li>1 cup almond milk</li>
-                    </ul>
-                    <h4>Instructions:</h4>
-                    <p>Blend ingredients until smooth.</p>
-                </div>
+            
+            <div class="recipe" data-name="grilled salmon">
+                <h2>Grilled Salmon</h2>
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>Salmon fillet</li>
+                    <li>Steamed broccoli</li>
+                    <li>Brown rice</li>
+                    <li>Lemon butter sauce</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Season salmon with salt and pepper.</li>
+                    <li>Grill for 5-6 minutes per side.</li>
+                    <li>Serve with steamed broccoli and brown rice.</li>
+                </ol>
             </div>
 
-            <!-- Dinner Recipe -->
-            <div class="recipe" data-category="dinner">
-                <img src="https://source.unsplash.com/400x250/?grilled-salmon" alt="Grilled Salmon with Quinoa">
-                <h3>Grilled Salmon with Quinoa</h3>
-                <p>Calories: 520 kcal</p>
-                <button class="btn" onclick="toggleRecipe('recipe4')">View Recipe</button>
-                <div class="recipe-details" id="recipe4">
-                    <h4>Ingredients:</h4>
-                    <ul>
-                        <li>1 salmon fillet</li>
-                        <li>1/2 cup quinoa</li>
-                        <li>1 cup steamed broccoli</li>
-                        <li>1 tbsp olive oil</li>
-                        <li>Salt & pepper to taste</li>
-                    </ul>
-                    <h4>Instructions:</h4>
-                    <p>Season the salmon with salt, pepper, and olive oil. Grill for 4-5 minutes on each side. Cook quinoa as per package instructions and serve with steamed broccoli.</p>
-                </div>
+            
+            <div class="recipe" data-name="vegan protein bowl">
+                <h2>Vegan Protein Bowl</h2>
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>Tofu</li>
+                    <li>Kale</li>
+                    <li>Sweet potatoes</li>
+                    <li>Sesame seeds</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Roast sweet potatoes at 400°F for 25 minutes.</li>
+                    <li>Saute tofu and kale with sesame seeds.</li>
+                    <li>Combine and serve warm.</li>
+                </ol>
             </div>
 
+            
+            <div class="recipe" data-name="healthy pasta">
+                <h2>Healthy Pasta</h2>
+                <h4>Ingredients:</h4>
+                <ul>
+                    <li>Whole wheat pasta</li>
+                    <li>Tomato sauce</li>
+                    <li>Grilled chicken</li>
+                    <li>Parmesan cheese</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Boil pasta according to package instructions.</li>
+                    <li>Cook chicken and mix with tomato sauce.</li>
+                    <li>Top with parmesan cheese and serve.</li>
+                </ol>
+            </div>
         </div>
     </section>
 
