@@ -6,9 +6,9 @@
     <title>FastandFreshEats | Blog</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <header>
         <div class="logo">FastandFreshEats</div>
         <nav>
@@ -25,49 +25,47 @@
     </header>
 
     <section class="blog">
-        <h1>Healthy Eating Blog</h1>
-        <p>Read expert advice on meal planning, nutrition, and wellness.</p>
+        <h1>Healthy Eating & Meal Prep Tips</h1>
+        <p>Read expert advice on nutrition, meal planning, and time-saving strategies.</p>
 
         <div class="search-filter">
-            <input type="text" id="searchBlog" placeholder="Search blog posts..." onkeyup="searchBlogPosts()">
+            <input type="text" id="searchBlog" placeholder="Search blog..." onkeyup="searchBlogPosts()">
             <select id="blogCategoryFilter" onchange="filterBlogPosts()">
                 <option value="all">All Categories</option>
-                <option value="mealprep">Meal Prep</option>
-                <option value="healthyeating">Healthy Eating</option>
-                <option value="weightloss">Weight Loss</option>
+                <option value="nutrition">Nutrition</option>
+                <option value="meal-prep">Meal Prep</option>
+                <option value="healthy-lifestyle">Healthy Lifestyle</option>
             </select>
         </div>
 
         <div class="blog-container">
-            <div class="blog-post" data-category="mealprep">
-                <h3>5 Meal Prep Hacks to Save Time</h3>
-                <p><small>Posted on March 10, 2025</small></p>
-                <button class="btn" onclick="toggleBlogPost('post1')">Read More</button>
-                <div class="blog-content" id="post1">
-                    <p>Meal prepping can save you time and effort. Here are five easy hacks...</p>
-
-                    <div class="comment-section">
-                        <h4>Leave a Comment:</h4>
-                        <input type="text" id="commentInput1" placeholder="Write a comment...">
-                        <button class="btn" onclick="addComment('commentInput1', 'commentList1')">Post</button>
-                        <ul id="commentList1"></ul>
-                    </div>
+            <!-- Blog Post 1 -->
+            <div class="blog-post" data-category="nutrition">
+                <h3>5 Superfoods You Should Eat Every Day</h3>
+                <p>Discover the most nutrient-packed foods that should be part of your daily diet.</p>
+                <button class="btn" onclick="toggleBlogPost('blog1')">Read More</button>
+                <div class="blog-content" id="blog1">
+                    <p>Superfoods like spinach, berries, nuts, and salmon provide essential nutrients...</p>
                 </div>
             </div>
 
-            <div class="blog-post" data-category="healthyeating">
-                <h3>The Benefits of Eating Whole Foods</h3>
-                <p><small>Posted on March 5, 2025</small></p>
-                <button class="btn" onclick="toggleBlogPost('post2')">Read More</button>
-                <div class="blog-content" id="post2">
-                    <p>Whole foods are packed with nutrients and free from processed ingredients...</p>
+            <!-- Blog Post 2 -->
+            <div class="blog-post" data-category="meal-prep">
+                <h3>Meal Prep 101: Save Time & Eat Healthier</h3>
+                <p>Learn the best techniques to prep meals efficiently and stay on track with your diet.</p>
+                <button class="btn" onclick="toggleBlogPost('blog2')">Read More</button>
+                <div class="blog-content" id="blog2">
+                    <p>Prepping meals in advance can help you save money, reduce food waste...</p>
+                </div>
+            </div>
 
-                    <div class="comment-section">
-                        <h4>Leave a Comment:</h4>
-                        <input type="text" id="commentInput2" placeholder="Write a comment...">
-                        <button class="btn" onclick="addComment('commentInput2', 'commentList2')">Post</button>
-                        <ul id="commentList2"></ul>
-                    </div>
+            <!-- Blog Post 3 -->
+            <div class="blog-post" data-category="healthy-lifestyle">
+                <h3>How to Maintain a Healthy Diet on a Busy Schedule</h3>
+                <p>Simple tips to eat healthy even when you're short on time.</p>
+                <button class="btn" onclick="toggleBlogPost('blog3')">Read More</button>
+                <div class="blog-content" id="blog3">
+                    <p>Eating healthy when busy is easier with smart meal choices and efficient planning...</p>
                 </div>
             </div>
         </div>
@@ -76,5 +74,6 @@
     <footer>
         <p>&copy; 2025 FastandFreshEats | All Rights Reserved</p>
     </footer>
+
 </body>
 </html>
