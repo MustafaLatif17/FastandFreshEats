@@ -1,0 +1,318 @@
+/* ======== General Styles ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* ======== Header & Navigation ======== */
+header {
+    background: #28a745;
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ======== Hero Section ======== */
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?healthy-food') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffdb4d;
+}
+
+/* ======== Meal Plans & Recipes ======== */
+.meal-plans, .recipes {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.meal-plan-container, .recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.meal-plan, .recipe {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.meal-plan img, .recipe img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #28a745;
+}
+
+.meal-plan h2, .recipe h3 {
+    margin: 15px 0 5px;
+    color: #333;
+}
+
+.meal-plan p, .recipe p {
+    font-size: 16px;
+    color: #666;
+}
+
+.recipe-details {
+    display: none;
+    margin-top: 10px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* ======== Grocery List Page ======== */
+.grocery {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.grocery-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pre-made-lists, .custom-list {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: left;
+}
+
+#groceryList {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#groceryList li {
+    background: #e9ecef;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* ======== Blog Page ======== */
+.blog {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.blog-post {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.blog-content {
+    display: none;
+    margin-top: 10px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* ======== Comment Section ======== */
+.comment-section {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.comment-section input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comment-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.comment-section ul li {
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== Contact Page ======== */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: left;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: left;
+}
+
+/* ======== Footer ======== */
+footer {
+    background: #28a745;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ======== Responsive Design ======== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #28a745;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .meal-plan-container, .recipe-container, .grocery-container, .blog-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
