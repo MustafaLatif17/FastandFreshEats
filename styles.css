@@ -1,4 +1,4 @@
-
+/* ======== General Styles ======== */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     color: #333;
 }
 
-
+/* ======== Header & Navigation ======== */
 header {
     background: #28a745;
     color: white;
@@ -57,7 +57,7 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-
+/* ======== Hero Section ======== */
 .hero {
     background: url('https://source.unsplash.com/1600x900/?healthy-food') center/cover no-repeat;
     height: 80vh;
@@ -99,7 +99,7 @@ nav ul li a:hover {
     background: #ffdb4d;
 }
 
-
+/* ======== Meal Plans & Recipes ======== */
 .meal-plans, .recipes {
     text-align: center;
     padding: 60px 20px;
@@ -139,7 +139,7 @@ nav ul li a:hover {
     color: #666;
 }
 
-
+/* ======== Meal Plan Details (Initially Hidden) ======== */
 .meal-plan-details {
     display: none;
     background: #f8f9fa;
@@ -153,53 +153,7 @@ nav ul li a:hover {
     margin-bottom: 5px;
 }
 
-
-.grocery {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.grocery-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.pre-made-lists, .custom-list {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    text-align: left;
-}
-
-
-.blog {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.blog-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.blog-post {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    text-align: center;
-    padding: 15px;
-    transition: 0.3s;
-}
-
-
+/* ======== Footer ======== */
 footer {
     background: #28a745;
     color: white;
@@ -208,7 +162,7 @@ footer {
     margin-top: 20px;
 }
 
-
+/* ======== Responsive Design ======== */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -228,9 +182,10 @@ footer {
         display: flex;
     }
 
-    .meal-plan-container, .recipe-container, .grocery-container, .blog-container {
+    .meal-plan-container, .recipe-container {
         flex-direction: column;
         align-items: center;
     }
 }
+
 
