@@ -29,68 +29,76 @@
         <p>Choose from our expertly crafted meal plans designed to fit your lifestyle and dietary needs.</p>
 
         <div class="meal-plan-container">
+            <!-- Weight Loss Plan -->
             <div class="meal-plan">
                 <img src="https://source.unsplash.com/400x250/?healthy-meal" alt="Weight Loss Plan">
                 <h2>Weight Loss Plan</h2>
                 <p>Calories: 1200-1500 kcal/day</p>
                 <p>Perfect for those looking to shed extra pounds while maintaining balanced nutrition.</p>
-                <a href="#" class="btn">View Plan</a>
+                <button class="btn" onclick="togglePlan('plan1')">View Plan</button>
+                <div class="meal-plan-details" id="plan1">
+                    <h4>Day 1:</h4>
+                    <ul>
+                        <li><strong>Breakfast:</strong> Greek Yogurt with Berries (200 kcal)</li>
+                        <li><strong>Lunch:</strong> Grilled Chicken Salad (400 kcal)</li>
+                        <li><strong>Dinner:</strong> Quinoa & Veggie Stir-Fry (450 kcal)</li>
+                        <li><strong>Snack:</strong> Almonds & Dark Chocolate (150 kcal)</li>
+                    </ul>
+                </div>
             </div>
 
+            <!-- Vegan Meal Plan -->
             <div class="meal-plan">
                 <img src="https://source.unsplash.com/400x250/?vegan-food" alt="Vegan Meal Plan">
                 <h2>Vegan Meal Plan</h2>
                 <p>Calories: 1500-1800 kcal/day</p>
                 <p>Plant-based, nutrient-rich meals packed with fiber, protein, and vitamins.</p>
-                <a href="#" class="btn">View Plan</a>
+                <button class="btn" onclick="togglePlan('plan2')">View Plan</button>
+                <div class="meal-plan-details" id="plan2">
+                    <h4>Day 1:</h4>
+                    <ul>
+                        <li><strong>Breakfast:</strong> Smoothie Bowl with Chia Seeds (300 kcal)</li>
+                        <li><strong>Lunch:</strong> Lentil & Avocado Wrap (500 kcal)</li>
+                        <li><strong>Dinner:</strong> Stir-fried Tofu with Brown Rice (600 kcal)</li>
+                        <li><strong>Snack:</strong> Mixed Nuts & Fruit (200 kcal)</li>
+                    </ul>
+                </div>
             </div>
 
+            <!-- High-Protein Meal Plan -->
             <div class="meal-plan">
                 <img src="https://source.unsplash.com/400x250/?high-protein-meal" alt="High-Protein Plan">
                 <h2>High-Protein Plan</h2>
                 <p>Calories: 1800-2200 kcal/day</p>
                 <p>Designed for muscle building and recovery with protein-rich meals.</p>
-                <a href="#" class="btn">View Plan</a>
+                <button class="btn" onclick="togglePlan('plan3')">View Plan</button>
+                <div class="meal-plan-details" id="plan3">
+                    <h4>Day 1:</h4>
+                    <ul>
+                        <li><strong>Breakfast:</strong> Scrambled Eggs & Whole Grain Toast (350 kcal)</li>
+                        <li><strong>Lunch:</strong> Grilled Chicken & Sweet Potato (600 kcal)</li>
+                        <li><strong>Dinner:</strong> Salmon & Steamed Vegetables (700 kcal)</li>
+                        <li><strong>Snack:</strong> Protein Shake & Almond Butter (300 kcal)</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="meal-plan">
-                <img src="https://source.unsplash.com/400x250/?gluten-free-food" alt="Gluten-Free Plan">
-                <h2>Gluten-Free Plan</h2>
-                <p>Calories: 1600-2000 kcal/day</p>
-                <p>A perfect choice for individuals with gluten sensitivity or celiac disease.</p>
-                <a href="#" class="btn">View Plan</a>
-            </div>
-
+            <!-- Keto Meal Plan -->
             <div class="meal-plan">
                 <img src="https://source.unsplash.com/400x250/?keto-diet" alt="Keto Meal Plan">
                 <h2>Keto Meal Plan</h2>
                 <p>Calories: 1400-1800 kcal/day</p>
                 <p>Low-carb, high-fat meals designed for ketosis and fat burning.</p>
-                <a href="#" class="btn">View Plan</a>
-            </div>
-
-            <div class="meal-plan">
-                <img src="https://source.unsplash.com/400x250/?mediterranean-food" alt="Mediterranean Plan">
-                <h2>Mediterranean Plan</h2>
-                <p>Calories: 1700-2000 kcal/day</p>
-                <p>Heart-healthy meals inspired by the Mediterranean diet.</p>
-                <a href="#" class="btn">View Plan</a>
-            </div>
-
-            <div class="meal-plan">
-                <img src="https://source.unsplash.com/400x250/?diabetic-diet" alt="Diabetic-Friendly Plan">
-                <h2>Diabetic-Friendly Plan</h2>
-                <p>Calories: 1600-1900 kcal/day</p>
-                <p>Balanced meals with controlled sugar intake to maintain healthy blood sugar levels.</p>
-                <a href="#" class="btn">View Plan</a>
-            </div>
-
-            <div class="meal-plan">
-                <img src="https://source.unsplash.com/400x250/?paleo-diet" alt="Paleo Meal Plan">
-                <h2>Paleo Meal Plan</h2>
-                <p>Calories: 1600-2000 kcal/day</p>
-                <p>Whole foods-based plan that eliminates processed food and grains.</p>
-                <a href="#" class="btn">View Plan</a>
+                <button class="btn" onclick="togglePlan('plan4')">View Plan</button>
+                <div class="meal-plan-details" id="plan4">
+                    <h4>Day 1:</h4>
+                    <ul>
+                        <li><strong>Breakfast:</strong> Scrambled Eggs & Avocado (350 kcal)</li>
+                        <li><strong>Lunch:</strong> Cheese & Chicken Salad (500 kcal)</li>
+                        <li><strong>Dinner:</strong> Grilled Steak & Cauliflower Rice (600 kcal)</li>
+                        <li><strong>Snack:</strong> Cheese & Nuts (250 kcal)</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
