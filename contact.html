@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastandFreshEats | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FastandFreshEats</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mealplans.html">Meal Plans</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="grocerylists.html">Grocery Lists</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <p>Have a question or feedback? We'd love to hear from you!</p>
+
+        <div class="contact-container">
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Write your message..." required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+                <p id="formStatus"></p>
+            </form>
+
+            <div class="contact-info">
+                <h3>Our Contact Details</h3>
+                <p><i class="fas fa-envelope"></i> Email: support@fastandfresheats.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +1 234 567 890</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: 123 Healthy St, Food City, FC 56789</p>
+            </div>
+        </div>
+
+        <!-- Optional: Google Maps Integration -->
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093664!2d144.95373631532127!3d-37.816279179751885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1f4b791%3A0xa1f8e3ddc7b58f!2sFederation+Square!5e0!3m2!1sen!2sau!4v1614310114782!5m2!1sen!2sau" 
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FastandFreshEats | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
