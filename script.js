@@ -6,22 +6,7 @@ function toggleMenu() {
 // ========== TOGGLE MEAL PLAN DETAILS ==========
 function togglePlan(id) {
     let plan = document.getElementById(id);
-
-    // Hide all other meal plan details before showing the selected one
-    document.querySelectorAll('.meal-plan-details').forEach(detail => {
-        if (detail.id !== id) {
-            detail.style.display = "none";
-        }
-    });
-
-    // Toggle visibility for the clicked meal plan
     plan.style.display = (plan.style.display === "block") ? "none" : "block";
-}
-
-// ========== TOGGLE RECIPE DETAILS ==========
-function toggleRecipe(id) {
-    let recipe = document.getElementById(id);
-    recipe.style.display = (recipe.style.display === "block") ? "none" : "block";
 }
 
 // ========== CONTACT FORM WITH EMAILJS ==========
