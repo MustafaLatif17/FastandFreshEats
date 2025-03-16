@@ -1,4 +1,4 @@
-/* ======== General Styles ======== */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     color: #333;
 }
 
-/* ======== Header & Navigation ======== */
+
 header {
     background: #28a745;
     color: white;
@@ -57,7 +57,7 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* ======== Hero Section ======== */
+
 .hero {
     background: url('https://source.unsplash.com/1600x900/?healthy-food') center/cover no-repeat;
     height: 80vh;
@@ -99,7 +99,7 @@ nav ul li a:hover {
     background: #ffdb4d;
 }
 
-/* ======== Meal Plans & Recipes ======== */
+
 .meal-plans, .recipes {
     text-align: center;
     padding: 60px 20px;
@@ -139,15 +139,21 @@ nav ul li a:hover {
     color: #666;
 }
 
-.recipe-details {
+
+.meal-plan-details {
     display: none;
-    margin-top: 10px;
     background: #f8f9fa;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
-/* ======== Grocery List Page ======== */
+.meal-plan-details h4 {
+    color: #28a745;
+    margin-bottom: 5px;
+}
+
+
 .grocery {
     text-align: center;
     padding: 50px 20px;
@@ -169,20 +175,7 @@ nav ul li a:hover {
     text-align: left;
 }
 
-#groceryList {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-}
 
-#groceryList li {
-    background: #e9ecef;
-    padding: 5px;
-    margin: 5px 0;
-    border-radius: 5px;
-}
-
-/* ======== Blog Page ======== */
 .blog {
     text-align: center;
     padding: 50px 20px;
@@ -206,83 +199,7 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
-.blog-content {
-    display: none;
-    margin-top: 10px;
-    background: #f8f9fa;
-    padding: 10px;
-    border-radius: 5px;
-}
 
-/* ======== Comment Section ======== */
-.comment-section {
-    margin-top: 20px;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 5px;
-}
-
-.comment-section input {
-    width: 80%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.comment-section ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-.comment-section ul li {
-    background: white;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 5px 0;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* ======== Contact Page ======== */
-.contact {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.contact-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-form {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    text-align: left;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.contact-info {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    text-align: left;
-}
-
-/* ======== Footer ======== */
 footer {
     background: #28a745;
     color: white;
@@ -291,7 +208,7 @@ footer {
     margin-top: 20px;
 }
 
-/* ======== Responsive Design ======== */
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -316,3 +233,4 @@ footer {
         align-items: center;
     }
 }
+
