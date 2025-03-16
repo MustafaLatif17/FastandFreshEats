@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    
     <header>
         <div class="logo">FastandFreshEats</div>
         <nav>
@@ -24,48 +25,54 @@
         </nav>
     </header>
 
+   
     <section class="blog">
-        <h1>Healthy Eating & Meal Prep Tips</h1>
-        <p>Read expert advice on nutrition, meal planning, and time-saving strategies.</p>
+        <h1>Healthy Living & Nutrition Blog</h1>
+        <p>Stay updated with expert advice on meal planning, nutrition, and wellness.</p>
 
+        <!-- Search Bar -->
         <div class="search-filter">
             <input type="text" id="searchBlog" placeholder="Search blog..." onkeyup="searchBlogPosts()">
-            <select id="blogCategoryFilter" onchange="filterBlogPosts()">
-                <option value="all">All Categories</option>
-                <option value="nutrition">Nutrition</option>
-                <option value="meal-prep">Meal Prep</option>
-                <option value="healthy-lifestyle">Healthy Lifestyle</option>
-            </select>
         </div>
 
         <div class="blog-container">
-            <!-- Blog Post 1 -->
+            
             <div class="blog-post" data-category="nutrition">
-                <h3>5 Superfoods You Should Eat Every Day</h3>
+                <h2>5 Superfoods You Should Eat Every Day</h2>
                 <p>Discover the most nutrient-packed foods that should be part of your daily diet.</p>
                 <button class="btn" onclick="toggleBlogPost('blog1')">Read More</button>
                 <div class="blog-content" id="blog1">
-                    <p>Superfoods like spinach, berries, nuts, and salmon provide essential nutrients...</p>
+                    <p>Superfoods like spinach, berries, nuts, and salmon provide essential nutrients and antioxidants that promote overall well-being. These foods are known to boost immunity, improve heart health, and even enhance brain function.</p>
                 </div>
             </div>
 
-            <!-- Blog Post 2 -->
+          
             <div class="blog-post" data-category="meal-prep">
-                <h3>Meal Prep 101: Save Time & Eat Healthier</h3>
+                <h2>Meal Prep 101: Save Time & Eat Healthier</h2>
                 <p>Learn the best techniques to prep meals efficiently and stay on track with your diet.</p>
                 <button class="btn" onclick="toggleBlogPost('blog2')">Read More</button>
                 <div class="blog-content" id="blog2">
-                    <p>Prepping meals in advance can help you save money, reduce food waste...</p>
+                    <p>Meal prepping can save you time and money while ensuring that you always have healthy food available. Start by planning your meals for the week, creating a grocery list, and setting aside time for batch cooking.</p>
                 </div>
             </div>
 
-            <!-- Blog Post 3 -->
+            
             <div class="blog-post" data-category="healthy-lifestyle">
-                <h3>How to Maintain a Healthy Diet on a Busy Schedule</h3>
+                <h2>How to Maintain a Healthy Diet on a Busy Schedule</h2>
                 <p>Simple tips to eat healthy even when you're short on time.</p>
                 <button class="btn" onclick="toggleBlogPost('blog3')">Read More</button>
                 <div class="blog-content" id="blog3">
-                    <p>Eating healthy when busy is easier with smart meal choices and efficient planning...</p>
+                    <p>Even with a busy schedule, you can maintain a healthy diet by making smart meal choices, meal prepping in advance, and carrying healthy snacks like nuts, fruit, or protein bars.</p>
+                </div>
+            </div>
+
+            
+            <div class="blog-post" data-category="healthy-lifestyle">
+                <h2>The Importance of Hydration in Your Daily Diet</h2>
+                <p>Why drinking water is essential for your health and well-being.</p>
+                <button class="btn" onclick="toggleBlogPost('blog4')">Read More</button>
+                <div class="blog-content" id="blog4">
+                    <p>Staying hydrated is crucial for digestion, brain function, and maintaining energy levels. Aim for at least 8 glasses of water per day, and increase intake during exercise or in hot weather.</p>
                 </div>
             </div>
         </div>
@@ -77,3 +84,4 @@
 
 </body>
 </html>
+
