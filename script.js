@@ -6,14 +6,40 @@ function toggleMenu() {
 // ========== TOGGLE MEAL PLAN DETAILS ==========
 function togglePlan(id) {
     let plan = document.getElementById(id);
+
+    document.querySelectorAll('.meal-plan-details').forEach(detail => {
+        if (detail.id !== id) {
+            detail.style.display = "none";
+        }
+    });
+
     plan.style.display = (plan.style.display === "block") ? "none" : "block";
 }
 
-// ========== CONTACT FORM WITH EMAILJS ==========
-document.addEventListener("DOMContentLoaded", function() {
-    emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
-});
+// ========== TOGGLE RECIPE DETAILS ==========
+function toggleRecipe(id) {
+    let recipe = document.getElementById(id);
+    recipe.style.display = (recipe.style.display === "block") ? "none" : "block";
+}
 
+// ========== TOGGLE BLOG POST DETAILS ==========
+function toggleBlogPost(id) {
+    let content = document.getElementById(id);
+    content.style.display = (content.style.display === "block") ? "none" : "block";
+}
+
+// ========== SEARCH & FILTER BLOG POSTS ==========
+function searchBlogPosts() {
+    let input = document.getElementById("searchBlog").value.toLowerCase();
+    let posts = document.querySelectorAll(".blog-post");
+
+    posts.forEach(post => {
+        let title = post.querySelector("h3").innerText.toLowerCase();
+        post.style.display = title.includes(input) ? "block" : "none";
+    });
+}
+
+// ========== CONTACT FORM VALIDATION ==========
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -25,23 +51,9 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     if (name === "" || email === "" || message === "") {
         formStatus.style.color = "red";
         formStatus.textContent = "All fields are required.";
-        return;
+    } else {
+        formStatus.style.color = "green";
+        formStatus.textContent = "Your message has been received!";
+        document.getElementById("contactForm").reset();
     }
-
-    let params = {
-        user_name: name,
-        user_email: email,
-        message: message
-    };
-
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params)
-        .then(response => {
-            formStatus.style.color = "green";
-            formStatus.textContent = "Message sent successfully!";
-            document.getElementById("contactForm").reset();
-        })
-        .catch(error => {
-            formStatus.style.color = "red";
-            formStatus.textContent = "Error sending message. Please try again.";
-        });
 });
