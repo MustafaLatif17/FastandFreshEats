@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    
     <header>
         <div class="logo">FastandFreshEats</div>
         <nav>
@@ -24,36 +25,76 @@
         </nav>
     </header>
 
+    
     <section class="grocery">
-        <h1>Generate Your Grocery List</h1>
-        <p>Select a meal plan or choose individual recipes to generate your grocery list.</p>
+        <h1>Grocery Lists for Your Meals</h1>
+        <p>Get all the ingredients you need for your selected meals and find where to buy them!</p>
 
         <div class="grocery-container">
-            <!-- Pre-Made Grocery Lists -->
-            <div class="pre-made-lists">
-                <h3>Pre-Made Grocery Lists</h3>
-                <button class="btn" onclick="loadPreMadeList('weightLoss')">Weight Loss Plan</button>
-                <button class="btn" onclick="loadPreMadeList('vegan')">Vegan Plan</button>
-                <button class="btn" onclick="loadPreMadeList('keto')">Keto Plan</button>
+            <!-- Grocery List -->
+            <div class="grocery-list">
+                <h2>Chicken Salad</h2>
+                <ul>
+                    <li>Grilled chicken breast</li>
+                    <li>Mixed greens</li>
+                    <li>Cherry tomatoes</li>
+                    <li>Olive oil dressing</li>
+                </ul>
             </div>
 
-            <!-- Custom Grocery List Generator -->
-            <div class="custom-list">
-                <h3>Custom Grocery List</h3>
-                <p>Select Recipes:</p>
-                <div class="recipe-selection">
-                    <input type="checkbox" value="Eggs, Avocado, Whole-Grain Bread" onchange="updateGroceryList()"> Avocado Toast
-                    <input type="checkbox" value="Chicken Breast, Mixed Greens, Tomatoes, Olive Oil" onchange="updateGroceryList()"> Grilled Chicken Salad
-                    <input type="checkbox" value="Banana, Mixed Berries, Almond Milk" onchange="updateGroceryList()"> Berry Smoothie
-                    <input type="checkbox" value="Salmon, Quinoa, Broccoli, Olive Oil" onchange="updateGroceryList()"> Grilled Salmon with Quinoa
-                </div>
+            <div class="grocery-list">
+                <h2>Quinoa Power Bowl</h2>
+                <ul>
+                    <li>Cooked quinoa</li>
+                    <li>Avocado</li>
+                    <li>Grilled vegetables</li>
+                    <li>Black beans</li>
+                </ul>
+            </div>
 
-                <h4>Your Grocery List:</h4>
-                <ul id="groceryList"></ul>
+            <div class="grocery-list">
+                <h2>Grilled Salmon</h2>
+                <ul>
+                    <li>Salmon fillet</li>
+                    <li>Steamed broccoli</li>
+                    <li>Brown rice</li>
+                    <li>Lemon butter sauce</li>
+                </ul>
+            </div>
 
-                <button class="btn" onclick="downloadGroceryList()">Download Grocery List</button>
+            <div class="grocery-list">
+                <h2>Vegan Protein Bowl</h2>
+                <ul>
+                    <li>Tofu</li>
+                    <li>Kale</li>
+                    <li>Sweet potatoes</li>
+                    <li>Sesame seeds</li>
+                </ul>
+            </div>
+
+            <div class="grocery-list">
+                <h2>Healthy Pasta</h2>
+                <ul>
+                    <li>Whole wheat pasta</li>
+                    <li>Tomato sauce</li>
+                    <li>Grilled chicken</li>
+                    <li>Parmesan cheese</li>
+                </ul>
             </div>
         </div>
+
+        
+        <section class="stores">
+            <h2>Where to Buy?</h2>
+            <p>Find all your ingredients at these popular grocery stores:</p>
+            <ul>
+                <li>🛒 <strong>Walmart</strong> – Affordable grocery items & fresh produce.</li>
+                <li>🛍️ <strong>Target</strong> – Great for organic options and meal ingredients.</li>
+                <li>🌿 <strong>Whole Foods</strong> – Best for fresh, high-quality organic ingredients.</li>
+                <li>🏪 <strong>Trader Joe's</strong> – Unique and healthy food selections.</li>
+                <li>📦 <strong>Amazon Fresh</strong> – Get groceries delivered to your doorstep.</li>
+            </ul>
+        </section>
     </section>
 
     <footer>
