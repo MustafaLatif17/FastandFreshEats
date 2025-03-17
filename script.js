@@ -7,7 +7,7 @@ function toggleMenu() {
 function togglePlan(id) {
     let plan = document.getElementById(id);
 
-    // Hide all other meal plan details before showing the selected one
+    // showing the selected one
     document.querySelectorAll('.meal-plan-details').forEach(detail => {
         if (detail.id !== id) {
             detail.style.display = "none";
