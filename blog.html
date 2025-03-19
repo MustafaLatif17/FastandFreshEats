@@ -34,44 +34,13 @@
             <input type="text" id="searchBlog" placeholder="Search blog..." onkeyup="searchBlogPosts()">
         </div>
 
-        <!-- Featured Blog Post -->
-        <div class="featured-blog">
-            <h2>🌟 Featured: The Importance of Hydration in Your Daily Diet</h2>
-            <p>Why drinking water is essential for your health and well-being.</p>
-            <button class="btn" onclick="toggleBlogPost('blog4')">Read More</button>
-            <div class="blog-content" id="blog4">
-                <p>Staying hydrated is crucial for digestion, brain function, and maintaining energy levels. Aim for at least 8 glasses of water per day, and increase intake during exercise or in hot weather.</p>
-            </div>
-        </div>
-
         <div class="blog-container">
             <div class="blog-post" data-category="nutrition">
-                <img src="superfoods.jpg" alt="Superfoods">
                 <h2>5 Superfoods You Should Eat Every Day</h2>
                 <p>Discover the most nutrient-packed foods that should be part of your daily diet.</p>
                 <button class="btn" onclick="toggleBlogPost('blog1')">Read More</button>
-                <div class="blog-content" id="blog1">
+                <div class="blog-content" id="blog1" style="display: none;">
                     <p>Superfoods like spinach, berries, nuts, and salmon provide essential nutrients and antioxidants that promote overall well-being. These foods are known to boost immunity, improve heart health, and even enhance brain function.</p>
-                </div>
-            </div>
-
-            <div class="blog-post" data-category="meal-prep">
-                <img src="mealprep.jpg" alt="Meal Prep">
-                <h2>Meal Prep 101: Save Time & Eat Healthier</h2>
-                <p>Learn the best techniques to prep meals efficiently and stay on track with your diet.</p>
-                <button class="btn" onclick="toggleBlogPost('blog2')">Read More</button>
-                <div class="blog-content" id="blog2">
-                    <p>Meal prepping can save you time and money while ensuring that you always have healthy food available. Start by planning your meals for the week, creating a grocery list, and setting aside time for batch cooking.</p>
-                </div>
-            </div>
-
-            <div class="blog-post" data-category="healthy-lifestyle">
-                <img src="healthy_diet.jpg" alt="Healthy Diet">
-                <h2>How to Maintain a Healthy Diet on a Busy Schedule</h2>
-                <p>Simple tips to eat healthy even when you're short on time.</p>
-                <button class="btn" onclick="toggleBlogPost('blog3')">Read More</button>
-                <div class="blog-content" id="blog3">
-                    <p>Even with a busy schedule, you can maintain a healthy diet by making smart meal choices, meal prepping in advance, and carrying healthy snacks like nuts, fruit, or protein bars.</p>
                 </div>
             </div>
         </div>
@@ -88,6 +57,7 @@
 
                 <button type="submit" class="btn">Submit</button>
             </form>
+
             <div id="commentsSection">
                 <h3>Recent Comments:</h3>
                 <ul id="commentsList"></ul>
