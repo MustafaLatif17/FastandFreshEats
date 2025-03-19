@@ -140,7 +140,7 @@ h1 {
     background: #ffdb4d;
 }
 
-/* Hide Ingredients List by Default */
+
 .meal-plan-details {
     display: none;
     margin-top: 10px;
@@ -157,7 +157,7 @@ h1 {
 }
 
 .logo-container img {
-    width: 150px; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
     height: auto;
     display: block;
     margin: 0 auto;
