@@ -9,7 +9,6 @@
 </head>
 <body>
 
-    
     <header>
         <div class="logo">FastandFreshEats</div>
         <nav>
@@ -25,19 +24,18 @@
         </nav>
     </header>
 
-    
     <section class="recipes">
         <h1>Our Delicious Recipes</h1>
         <p>Find step-by-step instructions to prepare healthy and delicious meals.</p>
 
-        
+        <!-- Search Bar -->
         <div class="search-filter">
             <input type="text" id="searchBar" placeholder="Search for a recipe..." onkeyup="searchRecipes()">
         </div>
 
         <div class="recipe-container">
-            <!-- Recipe 1: Chicken Salad -->
             <div class="recipe" data-name="chicken salad">
+                <img src="chickensalad.jpg" alt="Chicken Salad">
                 <h2>Chicken Salad</h2>
                 <h4>Ingredients:</h4>
                 <ul>
@@ -52,10 +50,11 @@
                     <li>Mix with greens, tomatoes, and dressing.</li>
                     <li>Serve fresh and enjoy!</li>
                 </ol>
+                <button class="btn" onclick="downloadRecipe('chicken salad')">Download Recipe</button>
             </div>
 
-           
             <div class="recipe" data-name="quinoa power bowl">
+                <img src="quinoabowl.jpg" alt="Quinoa Power Bowl">
                 <h2>Quinoa Power Bowl</h2>
                 <h4>Ingredients:</h4>
                 <ul>
@@ -70,10 +69,11 @@
                     <li>Dice avocado and grill vegetables.</li>
                     <li>Mix everything together and serve.</li>
                 </ol>
+                <button class="btn" onclick="downloadRecipe('quinoa power bowl')">Download Recipe</button>
             </div>
 
-            
             <div class="recipe" data-name="grilled salmon">
+                <img src="grilledsalmon.jpg" alt="Grilled Salmon">
                 <h2>Grilled Salmon</h2>
                 <h4>Ingredients:</h4>
                 <ul>
@@ -88,10 +88,11 @@
                     <li>Grill for 5-6 minutes per side.</li>
                     <li>Serve with steamed broccoli and brown rice.</li>
                 </ol>
+                <button class="btn" onclick="downloadRecipe('grilled salmon')">Download Recipe</button>
             </div>
 
-            
             <div class="recipe" data-name="vegan protein bowl">
+                <img src="veganproteinbowl.jpg" alt="Vegan Protein Bowl">
                 <h2>Vegan Protein Bowl</h2>
                 <h4>Ingredients:</h4>
                 <ul>
@@ -106,10 +107,11 @@
                     <li>Saute tofu and kale with sesame seeds.</li>
                     <li>Combine and serve warm.</li>
                 </ol>
+                <button class="btn" onclick="downloadRecipe('vegan protein bowl')">Download Recipe</button>
             </div>
 
-            
             <div class="recipe" data-name="healthy pasta">
+                <img src="pasta.jpg" alt="Healthy Pasta">
                 <h2>Healthy Pasta</h2>
                 <h4>Ingredients:</h4>
                 <ul>
@@ -124,6 +126,7 @@
                     <li>Cook chicken and mix with tomato sauce.</li>
                     <li>Top with parmesan cheese and serve.</li>
                 </ol>
+                <button class="btn" onclick="downloadRecipe('healthy pasta')">Download Recipe</button>
             </div>
         </div>
     </section>
@@ -131,6 +134,5 @@
     <footer>
         <p>&copy; 2025 FastandFreshEats | All Rights Reserved</p>
     </footer>
-
 </body>
 </html>
