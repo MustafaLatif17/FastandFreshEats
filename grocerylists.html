@@ -9,7 +9,6 @@
 </head>
 <body>
 
-    
     <header>
         <div class="logo">FastandFreshEats</div>
         <nav>
@@ -25,13 +24,11 @@
         </nav>
     </header>
 
-    
     <section class="grocery">
         <h1>Grocery Lists for Your Meals</h1>
         <p>Get all the ingredients you need for your selected meals and find where to buy them!</p>
 
         <div class="grocery-container">
-            <!-- Grocery List -->
             <div class="grocery-list">
                 <h2>Chicken Salad</h2>
                 <ul>
@@ -40,6 +37,7 @@
                     <li>Cherry tomatoes</li>
                     <li>Olive oil dressing</li>
                 </ul>
+                <button class="btn" onclick="downloadGroceryList('Chicken Salad')">Download List</button>
             </div>
 
             <div class="grocery-list">
@@ -50,6 +48,7 @@
                     <li>Grilled vegetables</li>
                     <li>Black beans</li>
                 </ul>
+                <button class="btn" onclick="downloadGroceryList('Quinoa Power Bowl')">Download List</button>
             </div>
 
             <div class="grocery-list">
@@ -60,6 +59,7 @@
                     <li>Brown rice</li>
                     <li>Lemon butter sauce</li>
                 </ul>
+                <button class="btn" onclick="downloadGroceryList('Grilled Salmon')">Download List</button>
             </div>
 
             <div class="grocery-list">
@@ -70,6 +70,7 @@
                     <li>Sweet potatoes</li>
                     <li>Sesame seeds</li>
                 </ul>
+                <button class="btn" onclick="downloadGroceryList('Vegan Protein Bowl')">Download List</button>
             </div>
 
             <div class="grocery-list">
@@ -80,19 +81,19 @@
                     <li>Grilled chicken</li>
                     <li>Parmesan cheese</li>
                 </ul>
+                <button class="btn" onclick="downloadGroceryList('Healthy Pasta')">Download List</button>
             </div>
         </div>
 
-        
         <section class="stores">
             <h2>Where to Buy?</h2>
             <p>Find all your ingredients at these popular grocery stores:</p>
             <ul>
-                <li>🛒 <strong>Walmart</strong> – Affordable grocery items & fresh produce.</li>
-                <li>🛍️ <strong>Target</strong> – Great for organic options and meal ingredients.</li>
-                <li>🌿 <strong>Whole Foods</strong> – Best for fresh, high-quality organic ingredients.</li>
-                <li>🏪 <strong>Trader Joe's</strong> – Unique and healthy food selections.</li>
-                <li>📦 <strong>Amazon Fresh</strong> – Get groceries delivered to your doorstep.</li>
+                <li>🛒 <strong><a href="https://www.walmart.com/" target="_blank">Walmart</a></strong> – Affordable grocery items & fresh produce.</li>
+                <li>🛍️ <strong><a href="https://www.target.com/" target="_blank">Target</a></strong> – Great for organic options and meal ingredients.</li>
+                <li>🌿 <strong><a href="https://www.wholefoodsmarket.com/" target="_blank">Whole Foods</a></strong> – Best for fresh, high-quality organic ingredients.</li>
+                <li>🏪 <strong><a href="https://www.traderjoes.com/" target="_blank">Trader Joe's</a></strong> – Unique and healthy food selections.</li>
+                <li>📦 <strong><a href="https://www.amazon.com/" target="_blank">Amazon Fresh</a></strong> – Get groceries delivered to your doorstep.</li>
             </ul>
         </section>
     </section>
@@ -100,6 +101,5 @@
     <footer>
         <p>&copy; 2025 FastandFreshEats | All Rights Reserved</p>
     </footer>
-
 </body>
 </html>
