@@ -14,6 +14,14 @@ function togglePlan(id) {
     plan.style.display = (plan.style.display === "block") ? "none" : "block";
 }
 
+// Filter Meal Plans
+function filterMeals(category) {
+    let meals = document.querySelectorAll(".meal-plan");
+    meals.forEach(meal => {
+        meal.style.display = (category === "all" || meal.getAttribute("data-category") === category) ? "block" : "none";
+    });
+}
+
 // Search Recipes
 function searchRecipes() {
     let input = document.getElementById("searchBar").value.toLowerCase();
@@ -57,11 +65,26 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     }
 });
 
+// Download Recipe as TXT
+function downloadRecipe(recipeName) {
+    let recipeElement = document.querySelector(`.recipe[data-name='${recipeName.toLowerCase()}']`);
+    let ingredients = recipeElement.querySelector("ul").innerText;
+    let instructions = recipeElement.querySelector("ol").innerText;
+    let textContent = `Recipe: ${recipeName}\n\nIngredients:\n${ingredients}\n\nInstructions:\n${instructions}`;
+    let blob = new Blob([textContent], { type: "text/plain" });
+    let a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `${recipeName}_Recipe.txt`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
 // Download Grocery List
 function downloadGroceryList(mealName) {
-    let items = document.querySelector(`.grocery-list h2:contains('${mealName}')`).nextElementSibling.innerHTML;
-    let groceryText = `Grocery List for ${mealName}\n` + items.replace(/<li>/g, "- ").replace(/<\/li>/g, "\n");
-    let blob = new Blob([groceryText], { type: "text/plain" });
+    let groceryList = document.querySelector(`.grocery-list h2:contains('${mealName}')`).nextElementSibling.innerText;
+    let textContent = `Grocery List for ${mealName}\n\n${groceryList}`;
+    let blob = new Blob([textContent], { type: "text/plain" });
     let a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
     a.download = `${mealName}_Grocery_List.txt`;
@@ -77,8 +100,21 @@ document.getElementById("reviewForm").addEventListener("submit", function(event)
     let rating = document.getElementById("rating").value;
     let reviewText = document.getElementById("userReview").value;
     let reviewsList = document.getElementById("reviewsList");
-    let newReview = document.createElement("li");
-    newReview.innerHTML = `<strong>${name}</strong> - ${"⭐".repeat(rating)}<br>${reviewText}`;
+    let newReview = document.createElement("div");
+    newReview.classList.add("review");
+    newReview.innerHTML = `<h3>${name}</h3><p>${"⭐".repeat(rating)}</p><p>${reviewText}</p>`;
     reviewsList.appendChild(newReview);
     document.getElementById("reviewForm").reset();
+});
+
+// Submit Blog Comment
+document.getElementById("commentForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let username = document.getElementById("username").value;
+    let commentText = document.getElementById("userComment").value;
+    let commentsList = document.getElementById("commentsList");
+    let newComment = document.createElement("li");
+    newComment.innerHTML = `<strong>${username}:</strong> ${commentText}`;
+    commentsList.appendChild(newComment);
+    document.getElementById("commentForm").reset();
 });
