@@ -7,7 +7,7 @@
 }
 
 body {
-    background: #f8f9fa;
+    background: beige; /* Updated to beige background */
     color: #333;
     line-height: 1.6;
 }
@@ -58,49 +58,18 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
-    background-color: beige;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Search Bar Styling */
+.search-container {
     text-align: center;
-    color: white;
-    padding: 20px;
+    margin: 20px 0;
 }
 
-.hero-content {
-    position: relative;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
-}
-
-.hero h1 {
-    font-size: 40px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.btn {
-    display: inline-block;
-    background: #ffcc00;
-    color: black;
-    padding: 10px 20px;
+#searchInput {
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #555;
     border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #ffdb4d;
+    font-size: 16px;
 }
 
 /* Sections */
@@ -114,14 +83,16 @@ h1 {
     margin-bottom: 20px;
 }
 
-.meal-plan-container, .recipe-container, .blog-container, .grocery-container, .reviews-container {
+/* Meal Plan Container */
+.meal-plan-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.meal-plan, .recipe, .blog-post, .grocery-list, .review {
+/* Meal Plan Card */
+.meal-plan {
     background: white;
     border-radius: 10px;
     overflow: hidden;
@@ -129,51 +100,54 @@ h1 {
     width: 320px;
     text-align: center;
     padding: 15px;
-    transition: 0.3s;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.meal-plan img, .recipe img, .blog-post img {
+/* Hover Effect on Meal Plan */
+.meal-plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Meal Plan Images */
+.meal-plan img {
     width: 100%;
     height: auto;
-    border-bottom: 2px solid #28a745;
+    border-bottom: 3px solid #28a745;
+    transition: transform 0.3s ease-in-out;
 }
 
-.review p {
-    margin-top: 10px;
+/* Image Hover Effect */
+.meal-plan img:hover {
+    transform: scale(1.08);
 }
 
-/* Contact Page */
-.contact-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-form {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    text-align: left;
-}
-
-form input, form textarea, form select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+/* Meal Plan Buttons */
+.btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: black;
+    padding: 10px 20px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
 }
 
-.contact-info {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    text-align: left;
+.btn:hover {
+    background: #ffdb4d;
+}
+
+/* Hide Ingredients List by Default */
+.meal-plan-details {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
@@ -205,8 +179,12 @@ footer {
         display: flex;
     }
 
-    .meal-plan-container, .recipe-container, .blog-container, .grocery-container, .reviews-container {
+    .meal-plan-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    #searchInput {
+        width: 80%;
     }
 }
