@@ -1,4 +1,4 @@
-
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
 }
 
-
+/* Header & Navigation */
 header {
     background: #28a745;
     color: white;
@@ -58,10 +58,10 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-
+/* Hero Section */
 .hero {
     position: relative;
-    background: url('/mnt/data/background.jpg') center/cover no-repeat;
+    background-color: beige;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -71,21 +71,12 @@ nav ul li a:hover {
     padding: 20px;
 }
 
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5);
-}
-
 .hero-content {
     position: relative;
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 8px;
+    color: white;
 }
 
 .hero h1 {
@@ -112,7 +103,7 @@ nav ul li a:hover {
     background: #ffdb4d;
 }
 
-
+/* Sections */
 section {
     padding: 60px 20px;
     text-align: center;
@@ -123,20 +114,14 @@ h1 {
     margin-bottom: 20px;
 }
 
-
-.meal-plans, .recipes, .grocery, .blog, .contact {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.meal-plan-container, .recipe-container, .blog-container, .grocery-container {
+.meal-plan-container, .recipe-container, .blog-container, .grocery-container, .reviews-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.meal-plan, .recipe, .blog-post {
+.meal-plan, .recipe, .blog-post, .grocery-list, .review {
     background: white;
     border-radius: 10px;
     overflow: hidden;
@@ -153,50 +138,11 @@ h1 {
     border-bottom: 2px solid #28a745;
 }
 
-.meal-plan h2, .recipe h3, .blog-post h3 {
-    margin: 15px 0 5px;
-    color: #333;
-}
-
-.meal-plan button, .recipe button, .blog-post button {
+.review p {
     margin-top: 10px;
 }
 
-
-.meal-plan-details, .recipe-details, .blog-content {
-    display: none;
-    background: #f8f9fa;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.meal-plan-details h4, .recipe-details h4, .blog-content h4 {
-    color: #28a745;
-    margin-bottom: 5px;
-}
-
-
-.grocery-list {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 320px;
-    text-align: center;
-}
-
-.stores ul {
-    list-style: none;
-    margin-top: 20px;
-}
-
-.stores ul li {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-
+/* Contact Page */
 .contact-container {
     display: flex;
     justify-content: center;
@@ -213,7 +159,7 @@ form {
     text-align: left;
 }
 
-form input, form textarea {
+form input, form textarea, form select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -230,7 +176,7 @@ form input, form textarea {
     text-align: left;
 }
 
-
+/* Footer */
 footer {
     background: #28a745;
     color: white;
@@ -239,7 +185,7 @@ footer {
     margin-top: 20px;
 }
 
-
+/* Responsive Design */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -259,7 +205,7 @@ footer {
         display: flex;
     }
 
-    .meal-plan-container, .recipe-container, .blog-container, .grocery-container {
+    .meal-plan-container, .recipe-container, .blog-container, .grocery-container, .reviews-container {
         flex-direction: column;
         align-items: center;
     }
