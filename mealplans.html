@@ -9,7 +9,6 @@
 </head>
 <body>
 
-    <!-- Header & Navigation -->
     <header>
         <div class="logo">FastandFreshEats</div>
         <nav>
@@ -25,36 +24,25 @@
         </nav>
     </header>
 
-    
     <section class="meal-plans">
         <h1>Our Meal Plans</h1>
         <p>Choose from our expertly crafted meal plans designed to fit your lifestyle and dietary needs.</p>
+        
+        <!-- Filter Options -->
+        <div class="filter-bar">
+            <button class="btn" onclick="filterMeals('all')">All</button>
+            <button class="btn" onclick="filterMeals('breakfast')">Breakfast</button>
+            <button class="btn" onclick="filterMeals('lunch')">Lunch</button>
+            <button class="btn" onclick="filterMeals('dinner')">Dinner</button>
+        </div>
 
         <div class="meal-plan-container">
-            
-            <div class="meal-plan">
-                <img src="chickensalad.jpg" alt="Chicken Salad">
-                <h2>Chicken Salad</h2>
-                <p>Calories: 350 kcal | Protein: 30g | Carbs: 20g | Fats: 12g</p>
-                <button class="btn" onclick="togglePlan('plan1')">View Ingredients</button>
-                <div class="meal-plan-details" id="plan1">
-                    <h4>Ingredients:</h4>
-                    <ul>
-                        <li>Grilled chicken breast</li>
-                        <li>Mixed greens</li>
-                        <li>Cherry tomatoes</li>
-                        <li>Olive oil dressing</li>
-                    </ul>
-                </div>
-            </div>
-
-            
-            <div class="meal-plan">
+            <div class="meal-plan" data-category="breakfast">
                 <img src="quinoabowl.jpg" alt="Quinoa Power Bowl">
                 <h2>Quinoa Power Bowl</h2>
                 <p>Calories: 400 kcal | Protein: 25g | Carbs: 50g | Fats: 10g</p>
-                <button class="btn" onclick="togglePlan('plan2')">View Ingredients</button>
-                <div class="meal-plan-details" id="plan2">
+                <button class="btn" onclick="togglePlan('plan1')">View Ingredients</button>
+                <div class="meal-plan-details" id="plan1">
                     <h4>Ingredients:</h4>
                     <ul>
                         <li>Cooked quinoa</li>
@@ -65,13 +53,12 @@
                 </div>
             </div>
 
-            
-            <div class="meal-plan">
+            <div class="meal-plan" data-category="lunch">
                 <img src="grilledsalmon.jpg" alt="Grilled Salmon">
                 <h2>Grilled Salmon</h2>
                 <p>Calories: 500 kcal | Protein: 40g | Carbs: 15g | Fats: 22g</p>
-                <button class="btn" onclick="togglePlan('plan3')">View Ingredients</button>
-                <div class="meal-plan-details" id="plan3">
+                <button class="btn" onclick="togglePlan('plan2')">View Ingredients</button>
+                <div class="meal-plan-details" id="plan2">
                     <h4>Ingredients:</h4>
                     <ul>
                         <li>Salmon fillet</li>
@@ -82,8 +69,23 @@
                 </div>
             </div>
 
-            
-            <div class="meal-plan">
+            <div class="meal-plan" data-category="lunch">
+                <img src="chickensalad.jpg" alt="Chicken Salad">
+                <h2>Chicken Salad</h2>
+                <p>Calories: 350 kcal | Protein: 30g | Carbs: 20g | Fats: 12g</p>
+                <button class="btn" onclick="togglePlan('plan3')">View Ingredients</button>
+                <div class="meal-plan-details" id="plan3">
+                    <h4>Ingredients:</h4>
+                    <ul>
+                        <li>Grilled chicken breast</li>
+                        <li>Mixed greens</li>
+                        <li>Cherry tomatoes</li>
+                        <li>Olive oil dressing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="meal-plan" data-category="dinner">
                 <img src="veganproteinbowl.jpg" alt="Vegan Protein Bowl">
                 <h2>Vegan Protein Bowl</h2>
                 <p>Calories: 420 kcal | Protein: 28g | Carbs: 55g | Fats: 8g</p>
@@ -99,8 +101,7 @@
                 </div>
             </div>
 
-            
-            <div class="meal-plan">
+            <div class="meal-plan" data-category="dinner">
                 <img src="pasta.jpg" alt="Healthy Pasta">
                 <h2>Healthy Pasta</h2>
                 <p>Calories: 450 kcal | Protein: 20g | Carbs: 60g | Fats: 12g</p>
@@ -121,6 +122,5 @@
     <footer>
         <p>&copy; 2025 FastandFreshEats | All Rights Reserved</p>
     </footer>
-
 </body>
 </html>
