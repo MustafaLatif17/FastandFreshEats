@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastandFreshEats | Customer Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">FastandFreshEats</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mealplans.html">Meal Plans</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="grocerylists.html">Grocery Lists</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section class="reviews">
+        <h1>Customer Reviews</h1>
+        <p>See what our happy customers have to say about FastandFreshEats!</p>
+
+        <div class="reviews-container">
+            <div class="review">
+                <h3>John Doe</h3>
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>"The meal plans are fantastic! Super easy to follow and really helped me stay on track with healthy eating."</p>
+            </div>
+
+            <div class="review">
+                <h3>Sarah Lee</h3>
+                <p>⭐️⭐️⭐️⭐️</p>
+                <p>"Love the grocery list feature. It makes shopping so much easier! Would definitely recommend."</p>
+            </div>
+
+            <div class="review">
+                <h3>Mark Stevens</h3>
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>"Great recipes, healthy choices, and simple instructions. FastandFreshEats is a game changer!"</p>
+            </div>
+        </div>
+
+        <!-- User Review Submission Form -->
+        <section class="submit-review">
+            <h2>Leave a Review</h2>
+            <form id="reviewForm">
+                <label for="username">Name:</label>
+                <input type="text" id="username" placeholder="Your Name" required>
+
+                <label for="rating">Rating:</label>
+                <select id="rating" required>
+                    <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+                    <option value="4">⭐️⭐️⭐️⭐️</option>
+                    <option value="3">⭐️⭐️⭐️</option>
+                    <option value="2">⭐️⭐️</option>
+                    <option value="1">⭐️</option>
+                </select>
+
+                <label for="userReview">Your Review:</label>
+                <textarea id="userReview" placeholder="Write your review..." required></textarea>
+
+                <button type="submit" class="btn">Submit Review</button>
+            </form>
+
+            <div id="newReviews">
+                <h3>Recent Reviews:</h3>
+                <ul id="reviewsList"></ul>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FastandFreshEats | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
