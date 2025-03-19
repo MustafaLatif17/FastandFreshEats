@@ -150,6 +150,25 @@ h1 {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo Container (Below Explore Meal Button) */
+.logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo-container img {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Logo Hover Effect */
+.logo-container img:hover {
+    transform: scale(1.1);
+}
+
 /* Footer */
 footer {
     background: #28a745;
@@ -186,5 +205,9 @@ footer {
 
     #searchInput {
         width: 80%;
+    }
+
+    .logo-container img {
+        width: 120px; /* Smaller size for mobile */
     }
 }
