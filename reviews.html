@@ -1,94 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastandFreshEats | Customer Reviews</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FastandFreshEats | Customer Reviews</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-    <header>
-        <div class="logo">FastandFreshEats</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="mealplans.html">Meal Plans</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="grocerylists.html">Grocery Lists</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-            </ul>
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">
+      FastandFreshEats
+      <img src="logo.png" alt="Fast & Fresh Eats Logo" class="logo-img">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mealplans.html">Meal Plans</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="grocerylists.html">Grocery Lists</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
 
-    <section class="reviews">
-        <h1>Customer Reviews</h1>
-        <p>See what our happy customers have to say about FastandFreshEats!</p>
+  <section class="reviews">
+    <h1>Customer Reviews</h1>
+    <p>See what our happy customers have to say about FastandFreshEats!</p>
 
-        <div class="reviews-container" id="reviewsList">
-            <div class="review">
-                <h3>John Doe</h3>
-                <p>⭐️⭐️⭐️⭐️⭐️</p>
-                <p>"The meal plans are fantastic! Super easy to follow and really helped me stay on track with healthy eating."</p>
-            </div>
-            <div class="review">
-                <h3>Emily Smith</h3>
-                <p>⭐️⭐️⭐️⭐️⭐️</p>
-                <p>"Absolutely love the recipes! They are easy to follow and make healthy eating so much more enjoyable."</p>
-            </div>
-            <div class="review">
-                <h3>Michael Johnson</h3>
-                <p>⭐️⭐️⭐️⭐️</p>
-                <p>"Great meal plans! I wish there were more vegetarian options, but overall a fantastic experience."</p>
-            </div>
-            <div class="review">
-                <h3>Jessica Williams</h3>
-                <p>⭐️⭐️⭐️⭐️⭐️</p>
-                <p>"FastandFreshEats has completely changed the way I eat. The grocery lists are super helpful!"</p>
-            </div>
-            <div class="review">
-                <h3>David Brown</h3>
-                <p>⭐️⭐️⭐️⭐️</p>
-                <p>"The blog is very informative, and the meal plans have helped me stay on track with my diet goals."</p>
-            </div>
-            <div class="review">
-                <h3>Sarah Miller</h3>
-                <p>⭐️⭐️⭐️⭐️⭐️</p>
-                <p>"The best meal planning service I've tried! Everything is well-organized and easy to follow."</p>
-            </div>
+    <div class="reviews-container" id="reviewsList">
+      <div class="review card">
+        <h3>John Doe</h3>
+        <p>⭐️⭐️⭐️⭐️⭐️</p>
+        <p>"The meal plans are fantastic! Super easy to follow and really helped me stay on track with healthy eating."</p>
+      </div>
+      <div class="review card">
+        <h3>Emily Smith</h3>
+        <p>⭐️⭐️⭐️⭐️⭐️</p>
+        <p>"Absolutely love the recipes! They are easy to follow and make healthy eating so much more enjoyable."</p>
+      </div>
+      <div class="review card">
+        <h3>Michael Johnson</h3>
+        <p>⭐️⭐️⭐️⭐️</p>
+        <p>"Great meal plans! I wish there were more vegetarian options, but overall a fantastic experience."</p>
+      </div>
+      <div class="review card">
+        <h3>Jessica Williams</h3>
+        <p>⭐️⭐️⭐️⭐️⭐️</p>
+        <p>"FastandFreshEats has completely changed the way I eat. The grocery lists are super helpful!"</p>
+      </div>
+      <div class="review card">
+        <h3>David Brown</h3>
+        <p>⭐️⭐️⭐️⭐️</p>
+        <p>"The blog is very informative, and the meal plans have helped me stay on track with my diet goals."</p>
+      </div>
+      <div class="review card">
+        <h3>Sarah Miller</h3>
+        <p>⭐️⭐️⭐️⭐️⭐️</p>
+        <p>"The best meal planning service I've tried! Everything is well-organized and easy to follow."</p>
+      </div>
+    </div>
 
-        </div>
+    <!-- User Review Submission Form -->
+    <section class="submit-review">
+      <h2>Leave a Review</h2>
+      <form id="reviewForm" class="card" style="max-width: 600px; margin: 0 auto;">
+        <label for="username">Name:</label>
+        <input type="text" id="username" placeholder="Your Name" required>
 
-        <!-- User Review Submission Form -->
-        <section class="submit-review">
-            <h2>Leave a Review</h2>
-            <form id="reviewForm">
-                <label for="username">Name:</label>
-                <input type="text" id="username" placeholder="Your Name" required>
+        <label for="rating">Rating:</label>
+        <select id="rating" required>
+          <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+          <option value="4">⭐️⭐️⭐️⭐️</option>
+          <option value="3">⭐️⭐️⭐️</option>
+          <option value="2">⭐️⭐️</option>
+          <option value="1">⭐️</option>
+        </select>
 
-                <label for="rating">Rating:</label>
-                <select id="rating" required>
-                    <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
-                    <option value="4">⭐️⭐️⭐️⭐️</option>
-                    <option value="3">⭐️⭐️⭐️</option>
-                    <option value="2">⭐️⭐️</option>
-                    <option value="1">⭐️</option>
-                </select>
+        <label for="userReview">Your Review:</label>
+        <textarea id="userReview" placeholder="Write your review..." required></textarea>
 
-                <label for="userReview">Your Review:</label>
-                <textarea id="userReview" placeholder="Write your review..." required></textarea>
-
-                <button type="submit" class="btn">Submit Review</button>
-            </form>
-        </section>
+        <button type="submit" class="btn">Submit Review</button>
+      </form>
     </section>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 FastandFreshEats | All Rights Reserved</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 FastandFreshEats | All Rights Reserved</p>
+  </footer>
+
 </body>
 </html>
