@@ -14,14 +14,6 @@ function togglePlan(id) {
     plan.style.display = (plan.style.display === "block") ? "none" : "block";
 }
 
-// Filter Meal Plans by Category
-function filterMeals(category) {
-    let meals = document.querySelectorAll(".meal-plan");
-    meals.forEach(meal => {
-        meal.style.display = (category === "all" || meal.getAttribute("data-category") === category) ? "block" : "none";
-    });
-}
-
 // Search Meal Plans
 function searchMeals() {
     let input = document.getElementById("searchInput").value.toLowerCase();
@@ -135,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             let newReview = document.createElement("div");
-            newReview.classList.add("review");
+            newReview.classList.add("review", "card");
             newReview.innerHTML = `<h3>${name}</h3><p>${"⭐".repeat(rating)}</p><p>${reviewText}</p>`;
             reviewsList.appendChild(newReview);
             reviewForm.reset();
@@ -143,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Submit Blog Comment
+// Blog Comment Submission (if implemented later)
 document.addEventListener("DOMContentLoaded", function () {
     let commentForm = document.getElementById("commentForm");
     if (commentForm) {
