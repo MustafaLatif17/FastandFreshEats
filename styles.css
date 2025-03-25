@@ -1,213 +1,311 @@
 /* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
 body {
-    background: beige; /* Updated to beige background */
-    color: #333;
-    line-height: 1.6;
+  background: beige;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* Header & Navigation */
 header {
-    background: #28a745;
-    color: white;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  background: #28a745;
+  color: white;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-img {
+  width: 50px;
+  height: auto;
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* Search Bar Styling */
-.search-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
-#searchInput {
-    width: 50%;
-    padding: 10px;
-    border: 2px solid #555;
-    border-radius: 5px;
-    font-size: 16px;
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 /* Sections */
 section {
-    padding: 60px 20px;
-    text-align: center;
+  padding: 80px 20px 60px; /* top padding adjusted for fixed header */
+  text-align: center;
 }
 
 h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
-/* Meal Plan Container */
-.meal-plan-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Meal Plan Card */
-.meal-plan {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 320px;
-    text-align: center;
-    padding: 15px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Hover Effect on Meal Plan */
-.meal-plan:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Meal Plan Images */
-.meal-plan img {
-    width: 100%;
-    height: auto;
-    border-bottom: 3px solid #28a745;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Image Hover Effect */
-.meal-plan img:hover {
-    transform: scale(1.08);
-}
-
-/* Meal Plan Buttons */
+/* Buttons */
 .btn {
-    display: inline-block;
-    background: #ffcc00;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
-    border: none;
+  display: inline-block;
+  background: #ffcc00;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
 }
 
 .btn:hover {
-    background: #ffdb4d;
+  background: #ffdb4d;
 }
 
+/* Search Bar */
+.search-container,
+.search-filter {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#searchInput,
+#searchBar,
+#searchBlog {
+  width: 50%;
+  padding: 10px;
+  border: 2px solid #555;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Reusable Card Layout */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  text-align: left;
+}
+
+/* Meal Plans */
+.meal-plan-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.meal-plan {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.meal-plan:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.meal-plan img {
+  width: 100%;
+  height: auto;
+  border-bottom: 3px solid #28a745;
+  transition: transform 0.3s ease-in-out;
+}
+
+.meal-plan img:hover {
+  transform: scale(1.08);
+}
 
 .meal-plan-details {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo Container (Below Explore Meal Button) */
+/* Logo Container in Hero */
 .logo-container {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .logo-container img {
-    width: 200px; /* Adjust as needed */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    transition: transform 0.3s ease-in-out;
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Logo Hover Effect */
 .logo-container img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Recipes */
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.recipe.card {
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+}
+
+/* Blog Posts */
+.blog-post {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  text-align: left;
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+}
+
+.blog-content {
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+/* Grocery Lists */
+.grocery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.grocery-list.card {
+  width: 300px;
+}
+
+/* Reviews */
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.review.card {
+  width: 320px;
+  text-align: left;
+}
+
+/* Forms */
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
 /* Footer */
 footer {
-    background: #28a745;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+  background: #28a745;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+  .menu-toggle {
+    display: block;
+  }
 
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background: #28a745;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-    }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #28a745;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
 
-    nav ul.active {
-        display: flex;
-    }
+  nav ul.active {
+    display: flex;
+  }
 
-    .meal-plan-container {
-        flex-direction: column;
-        align-items: center;
-    }
+  .meal-plan-container,
+  .recipe-container,
+  .grocery-container,
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    #searchInput {
-        width: 80%;
-    }
+  #searchInput,
+  #searchBar,
+  #searchBlog {
+    width: 80%;
+  }
 
-    .logo-container img {
-        width: 120px; /* Smaller size for mobile */
-    }
+  .logo-container img {
+    width: 120px;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
